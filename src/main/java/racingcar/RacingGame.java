@@ -24,4 +24,17 @@ public class RacingGame {
         }
         return carList;
     }
+
+    public void start(){
+        System.out.println(); // 빈 줄
+        System.out.println("실행 결과");
+
+        for (int i = 0; i < attemptCount; i++){
+            moveAllCars();
+            printRoundResult();
+            System.out.println();
+        }
+
+        printWinners();
+    }
 }
