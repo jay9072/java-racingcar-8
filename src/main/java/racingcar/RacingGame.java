@@ -51,4 +51,27 @@ public class RacingGame {
             System.out.println(car.getName() + " : " + bar);
         }
     }
+
+    private void printWinners(){
+        int maxPosition = findMaxPosition();
+        List<String> winners = new ArrayList<>();
+
+        for (Car car : cars) {
+            if (car.getPosition() == maxPosition){
+                winners.add(car.getName()); // 공동 우승자 케이스
+            }
+        }
+
+        System.out.println("최종 우승자 : " + String.join(", ", winners));
+    }
+
+    private int findMaxPosition() {
+        int max = 0;
+        for (Car car : cars) {
+            if (car.getPosition() > max) {
+                max = car.getPosition();
+            }
+        }
+        return max;
+    }
 }
