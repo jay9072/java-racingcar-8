@@ -44,4 +44,11 @@ public class RacingGame {
             car.move(randomNumber);
         }
     }
+
+    private void printRoundResult(){
+        for (Car car : cars){
+            String bar = "-".repeat(car.getPosition());
+            System.out.println(car.getName() + " : " + bar);
+        }
+    }
 }
