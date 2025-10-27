@@ -9,17 +9,17 @@ public class Car {
         this.name = name;
     }
 
-    public void move(int randomNumber){
-        if (randomNumber >= 4){
+    public void move(int randomNumber) {
+        if (randomNumber >= 4) {
             position++;
         }
     }
 
-    public int getPosition(){
+    public int getPosition() {
         return position;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 }
