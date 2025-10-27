@@ -5,5 +5,9 @@ public class Application {
         // TODO: 프로그램 구현
         String[] carNames = InputView.readCarNames();
         int attemptCount = InputView.readAttemptCount();
+        Car car = new Car("pobi");
+        car.move(5);  // 5면 전진해야 함
+        car.move(2);  // 2면 멈춰야 함
     }
 }
+
