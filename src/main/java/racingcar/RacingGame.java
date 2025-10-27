@@ -37,4 +37,11 @@ public class RacingGame {
 
         printWinners();
     }
+
+    private void moveAllCars(){
+        for (Car car : cars) {
+            int randomNumber = Randoms.pickNumberInRange(0, 9);
+            car.move(randomNumber);
+        }
+    }
 }
